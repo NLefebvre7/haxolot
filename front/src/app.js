@@ -64,10 +64,19 @@ server.get('/about', function(req, res) {
                   responseType: "application/json"
                 })
             .then((response) => {
-                console.log(response.data);
-                const tagline = response.data;
+                var obj = response.data
 
-             
+obj = JSON.stringify(obj[0])
+  console.log(obj._id);    
+                // console.log(obj._id);   
+
+                const tagline = response.data[0].email;
+// var newData = JSON.parse(response.data._id);
+// console.log(newData);
+
+
+
+
 
 
         res.render('pages/about', {
@@ -87,6 +96,15 @@ server.get('/about', function(req, res) {
 
    
 });
+
+server.post("/schools/create", function(req, res) {
+
+   
+});
+
+
+
+
 
 // about page
 // server.get('/about', function(req, res) {
