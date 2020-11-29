@@ -40,7 +40,7 @@ services:
     ports:
       - '3001:3001'
     volumes:
-      - './haxolot-front/src:/home/node/app'
+      - './front/src:/home/node/app'
     networks:
       - my-network
     depends_on:
